@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "b3fab847-c698-4b8a-9d65-161429a14516",
+		"name": "Test de API en Render -  Nicolas Ontivero Parcial 1 Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30264922"
+	},
+	"item": [
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://parcial1backnicolasontivero.onrender.com/api/persona/1"
+			},
+			"response": []
+		},
+		{
+			"name": "post persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Nicolas\",\r\n    \"apellido\": \"Ontivero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://parcial1backnicolasontivero.onrender.com/api/persona"
+			},
+			"response": []
+		},
+		{
+			"name": "search usando query methods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parcial1backnicolasontivero.onrender.com/api/persona/search1?nombre=F&apellido=M",
+					"protocol": "https",
+					"host": [
+						"parcial1backnicolasontivero",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"persona",
+						"search1"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "F"
+						},
+						{
+							"key": "apellido",
+							"value": "M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search usando jpql indexado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://parcial1backnicolasontivero.onrender.com/api/persona/search2?nombre=F&apellido=M",
+					"protocol": "https",
+					"host": [
+						"parcial1backnicolasontivero",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"persona",
+						"search2"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "F"
+						},
+						{
+							"key": "apellido",
+							"value": "M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search usando jpql nombrado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parcial1backnicolasontivero.onrender.com/api/persona/search3?nombre=F&apellido=M",
+					"protocol": "https",
+					"host": [
+						"parcial1backnicolasontivero",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"persona",
+						"search3"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "F"
+						},
+						{
+							"key": "apellido",
+							"value": "M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search usando native queries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parcial1backnicolasontivero.onrender.com/api/persona/search4?nombre=F&apellido=M",
+					"protocol": "https",
+					"host": [
+						"parcial1backnicolasontivero",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"persona",
+						"search4"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "F"
+						},
+						{
+							"key": "apellido",
+							"value": "M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all paged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parcial1backnicolasontivero.onrender.com/api/persona/paged?page=0&size=1",
+					"protocol": "https",
+					"host": [
+						"parcial1backnicolasontivero",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"persona",
+						"paged"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get paged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parcial1backnicolasontivero.onrender.com/api/persona/search4paged?nombre=F&apellido=M&page=0&size=4",
+					"protocol": "https",
+					"host": [
+						"parcial1backnicolasontivero",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"persona",
+						"search4paged"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "F"
+						},
+						{
+							"key": "apellido",
+							"value": "M"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
